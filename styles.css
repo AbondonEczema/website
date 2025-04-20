@@ -1,0 +1,243 @@
+/* ===== RESET & GLOBAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+iframe {
+    border: none; /* Removes default iframe border */
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ===== HEADER ===== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #8E5330; /* Brand green */
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.cta-button {
+    padding: 0.7rem 1.8rem;
+    background: #8E5330;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.cta-button:hover {
+    background: #8E5330;
+    transform: translateY(-2px);
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    text-align: center;
+    padding: 5rem 10% 3rem;
+    background: #F5F5DC;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: #8E5330;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.video-container {
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16/9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== FEATURES SECTION ===== */
+.features {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 10%;
+    overflow: hidden;
+}
+
+.features-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3') center/cover no-repeat;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+.feature-cards {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    width: 90%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-cards .card {
+    padding: 2rem;
+    text-align: center;
+}
+
+.feature-cards h3 {
+    color: #2a7f62;
+    margin-bottom: 1rem;
+}
+
+/* ===== PRICING SECTION ===== */
+.pricing {
+    padding: 6rem 10%;
+    text-align: center;
+    background: #F5F5DC;
+}
+
+.pricing h2 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: #1a5c44;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.pricing .card {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.pricing .card:hover {
+    transform: translateY(-10px);
+}
+
+.pricing .popular {
+    border: 2px solid #2a7f62;
+    position: relative;
+}
+
+.pricing .popular::after {
+    content: "Most Popular";
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: #2a7f62;
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #1a5c44;
+    color: #F5F5DC;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Mobile menu goes here */
+    }
+    
+    .hero, .features, .pricing {
+        padding: 3rem 5%;
+    }
+    
+    .feature-cards {
+        grid-template-columns: 1fr;
+    }
+}
+/* Add this at the BOTTOM of your CSS file */
+/* Payment buttons */
+.payment-options {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.twint-button {
+  background: #12B3A8;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.paypal-button {
+  background: #003087;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 0.8rem;
+}
+
+.international-options {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #ccc;
+  font-size: 0.9rem;
+}
+
+.international-options p {
+  margin-bottom: 0.5rem;
+  color: #666;
+} 
