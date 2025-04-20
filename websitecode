@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AbandonEczema | Natural Skin Relief</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">AbandonEczema</div>
+            <ul class="nav-links">
+                <li><a href="#features">How It Works</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+            </ul>
+            <button class="cta-button" onclick="window.location.href='#pricing'">Get Started</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Free Your Skin from Eczema</h1>
+        <p>Natural relief without harsh chemicals.</p>
+        
+        <!-- YouTube Video Embed -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1" 
+                title="AbandonEczema Product Demonstration" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+            ></iframe>
+        </div>
+        
+        <button class="cta-button" onclick="window.location.href='https://youtube.com'">Youtube</button>
+    </section>
+
+    <section id="features" class="features">
+        <div class="features-background"></div>
+        <div class="feature-cards">
+            <div class="card">
+                <h3>Save money</h3>
+                <p>Don't waste your money on steroid creams.</p>
+            </div>
+            <div class="card">
+                <h3>No withdrawals</h3>
+                <p>Let your body feel the best it has in years.</p>
+            </div>
+            <div class="card">
+                <h3>Understand yourself</h3>
+                <p>As you go through this course, learn and adapt for yourself. Everyone is different!</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Inside your pricing section (around line 60-80 in your file) -->
+<section id="pricing" class="pricing">
+  <h2>Simple Pricing</h2>
+  <div class="pricing-cards">
+    <div class="card">
+      <h3>Starter Kit</h3>
+      <p>CHF 29.99</p>
+      <!-- ADD PAYMENT BUTTONS HERE -->
+      <div class="payment-options">
+        <a href="twint://pay?amount=29.99&currency=CHF" class="cta-button twint-button">
+          <img src="twint-logo.png" alt="TWINT"> Buy with TWINT
+        </a>
+        <div class="international-options">
+          <p>International? Use:</p>
+          <a href="https://www.paypal.com/checkout?product_id=STARTER_KIT_ID" class="cta-button paypal-button">
+            <img src="paypal-logo.png" alt="PayPal"> PayPal
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat for other pricing tiers -->
+  </div>
+</section>
+
+    <footer id="contact">
+        <p>© 2024 AbandonEczema. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+// Detect Swiss users (add this near your existing script.js reference)
+document.addEventListener('DOMContentLoaded', () => {
+  const isSwiss = navigator.language === 'de-CH' || 
+                  Intl.DateTimeFormat().resolvedOptions().timeZone === 'Europe/Zurich';
+  
+  if (!isSwiss) {
+    const twintButtons = document.querySelectorAll('.twint-button');
+    twintButtons.forEach(btn => btn.style.display = 'none');
+  }
+});
+</script>
+</body>
+</html>
