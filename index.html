@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script 
+  src="https://www.paypal.com/sdk/js?client-id=BAAPQLP8KmgAYKq9xFmkm2Yto5c_66Bc6K4mnUx5U3t4bnb1PHaBWBk5GQE1lRXDzedvOhDvN5hoUXX5jw&components=hosted-buttons&disable-funding=venmo&currency=CHF">
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AbandonEczema | Natural Skin Relief</title>
@@ -32,7 +35,7 @@
             ></iframe>
         </div>
         
-        <button class="cta-button" onclick="window.location.href='https://www.youtube.com/@abandoneczema'">Youtube</button>
+        <button class="cta-button" onclick="window.location.href='https://youtube.com'">Youtube</button>
     </section>
 
     <section id="features" class="features">
@@ -58,10 +61,16 @@
   <h2>Simple Pricing</h2>
   <div class="pricing-cards">
     <div class="card">
-      <h3>Starter Kit</h3>
-      <p>CHF 29.99</p>
+      <h3>Natural remedies</h3>
+      <p></p>
       <!-- ADD PAYMENT BUTTONS HERE -->
-      <div class="payment-options">
+      <div id="paypal-container-KYWTT7DZJ9E7W"></div>
+<script>
+  paypal.HostedButtons({
+    hostedButtonId: "KYWTT7DZJ9E7W",
+  }).render("#paypal-container-KYWTT7DZJ9E7W")
+</script>
+        <div class="payment-options">
         <a href="twint://pay?amount=29.99&currency=CHF" class="cta-button twint-button">
           <img src="twint-logo.png" alt="TWINT"> Buy with TWINT
         </a>
@@ -95,4 +104,3 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 </body>
-</html>
